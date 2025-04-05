@@ -10,7 +10,7 @@ import os
 from telegram.ext import Updater, CommandHandler
 
 
-updater = Updater("YOUR_TOKEN", use_context=True)
+updater = Updater("TELEGRAM_TOKEN", use_context=True)
 dp = updater.dispatcher
 
 app = FastAPI()
