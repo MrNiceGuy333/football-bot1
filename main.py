@@ -8,7 +8,6 @@ from fastapi.templating import Jinja2Templates
 from telegram import Bot
 import os
 from telegram.ext import Updater, CommandHandler
-from aiogram import types
 
 
 updater = Updater("YOUR_TOKEN", use_context=True)
@@ -84,6 +83,8 @@ async def update_settings(request: Request, chat_id: str = Form(...)):
     global CHAT_ID
     CHAT_ID = chat_id
     return RedirectResponse("/", status_code=302)
-@dp.message_handler(commands=["test"])
-async def test_message(message: types.Message):
-    await message.answer("⚽️ Тест: Гол в первом тайме!")
+def test(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text="⚽️ Тест: Гол в первом тайме!")
+
+dp.add_handler(CommandHandler("test", test))
+
