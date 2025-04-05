@@ -87,4 +87,5 @@ def test(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="⚽️ Тест: Гол в первом тайме!")
 
 dp.add_handler(CommandHandler("test", test))
+print(f"TOKEN: {TELEGRAM_TOKEN}")
 
