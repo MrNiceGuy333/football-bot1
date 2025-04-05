@@ -7,4 +7,3 @@ python-multipart
 python-telegram-bot
 fastapi  # если ты используешь FastAPI
 uvicorn[standard]  # если нужно запускать как web-сервер
-aiogram
