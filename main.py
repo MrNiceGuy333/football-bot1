@@ -16,7 +16,7 @@ dp = updater.dispatcher
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "7739196769:AAFhSZeYk-v-sheZfc0ggl7E4T7S1xE1Ri0")
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "7739196769:AAEpASx34qf2ob65pDZbOIl7j65Fawjhx8g")
 CHAT_ID = os.getenv("CHAT_ID", "-1002665032382")
 API_KEY = os.getenv("API_KEY", "164ad857d5184191934aedf61911f69b")
 BASE_URL = 'https://api.football-data.org/v4/matches'
